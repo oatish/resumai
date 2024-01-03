@@ -1,0 +1,106 @@
+[tool.poetry]
+
+name = "resumai"
+version = "0.0"
+description = "Tool for updating resumes"
+
+packages = [{ include = "resumai" }]
+
+license = "MIT"
+authors = ["Shane Stephenson <stephenson.shane.a@gmail.com>"]
+
+readme = "README.md"
+homepage = "https://pypi.org/project/resumai"
+documentation = "https://resumai.readthedocs.io"
+repository = "https://github.com/oatish/resumai"
+
+keywords = [
+]
+classifiers = [
+    # TODO: update this list to match your application: https://pypi.org/pypi?%3Aaction=list_classifiers
+    "Development Status :: 1 - Planning",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+]
+
+[tool.poetry.dependencies]
+
+python = "^3.10"
+
+# TODO: Remove these and add your library's requirements
+click = "*"
+minilog = "*"
+marvin = "*"
+pyserde = { version = "*", extras = ["toml"] }
+
+[tool.poetry.dev-dependencies]
+
+# Formatters
+black = "^22.1"
+tomli = "*" # missing 'black' dependency
+isort = "^5.10"
+
+# Linters
+mypy = "^1.0"
+pydocstyle = "^6.1"
+pylint = "~2.15"
+wrapt = "*" # missing 'pylint' dependency
+
+# Testing
+pytest = "^7.3"
+pytest-describe = "^2.0"
+pytest-expecter = "^3.0"
+pytest-random = "*"
+pytest-cov = "^4.1"
+freezegun = "*"
+
+# Reports
+coveragespace = "^6.0"
+
+# Documentation
+mkdocs = "~1.3"
+pygments = "^2.11.1"
+
+# Tooling
+pyinstaller = "*"
+sniffer = "*"
+MacFSEvents = { version = "*", platform = "darwin" }
+pync = { version = "*", platform = "darwin" }
+ipython = "^7.12.0"
+
+[tool.poetry.scripts]
+
+resumai = "resumai.cli:main"
+
+[tool.black]
+
+quiet = true
+
+[tool.isort]
+
+profile = "black"
+
+[tool.mypy]
+
+ignore_missing_imports = true
+no_implicit_optional = true
+check_untyped_defs = true
+
+cache_dir = ".cache/mypy/"
+
+[tool.pytest.ini_options]
+
+addopts = "--cov --cov-report term-missing --cov-fail-under 95"
+cache_dir = ".cache/pytest/"
+markers = []
+
+[tool.coverage.run]
+source = ["resumai"]
+
+[build-system]
+
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

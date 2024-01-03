@@ -1,0 +1,37 @@
+narrative = "A cool cat."
+
+[contact_info]
+first_name = "Shane"
+last_name = "Stephenson"
+phone = "443-889-4517"
+email = "stephenson.shane.a@gmail.com"
+linkedin = "linkedin.com/in/shane-stephenson-"
+github = "github.com/oatish"
+website = "oatbread.com"
+
+[skills]
+Technologies = [
+    "Python",
+    "Rust",
+]
+Competencies = [
+    "Communication",
+    "Teamwork",
+    "Leadership",
+]
+
+[[education]]
+degree = "B.S. Computer Science"
+institution = "University of California, Santa Cruz"
+year = 2021
+gpa = 3.5
+
+[[job_history]]
+employer = "Google"
+title = "Software Engineer"
+start_date = "2021-01-01"
+end_date = "2022-01-01"
+description = [
+    "I wrote code.",
+    "I suffered.",
+]
