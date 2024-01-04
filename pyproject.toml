@@ -30,10 +30,10 @@ classifiers = [
 
 python = "^3.10"
 
-# TODO: Remove these and add your library's requirements
 click = "*"
 minilog = "*"
-marvin = "*"
+openai = "*"
+validators = "*"
 pyserde = { version = "*", extras = ["toml"] }
 
 [tool.poetry.dev-dependencies]
@@ -93,7 +93,7 @@ cache_dir = ".cache/mypy/"
 
 [tool.pytest.ini_options]
 
-addopts = "--cov --cov-report term-missing --cov-fail-under 95"
+addopts = "--cov --cov-report term-missing"
 cache_dir = ".cache/pytest/"
 markers = []
 

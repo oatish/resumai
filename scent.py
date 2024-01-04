@@ -4,6 +4,7 @@ import time
 import subprocess
 
 from sniffer.api import select_runnable, file_validator, runnable
+
 try:
     from pync import Notifier
 except ImportError:
@@ -47,7 +48,6 @@ def run_targets(*args):
 
     count = 0
     for count, (command, title, retry) in enumerate(Options.targets, start=1):
-
         success = call(command, title, retry)
         if not success:
             message = "✅ " * (count - 1) + "❌"

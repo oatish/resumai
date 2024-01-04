@@ -5,7 +5,9 @@ __pycache__/
 .ipynb_checkpoints/
 setup.py
 pip-wheel-metadata/
-poetry.loc
+poetry.lock
+test_resume.toml
+job.txt
 
 # Temporary OS files
 Icon*
